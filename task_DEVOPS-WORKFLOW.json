@@ -1,0 +1,292 @@
+{
+  "type" : "taskWorkflow",
+  "actions" : {
+    "abortActions" : [ ],
+    "emailNotifications" : [ ],
+    "setVariableActions" : [ ],
+    "snmpNotifications" : [ ],
+    "systemOperations" : [ ]
+  },
+  "calculateCp" : false,
+  "calendar" : null,
+  "cpDuration" : null,
+  "cpDurationUnit" : "Minutes",
+  "customField1" : {
+    "label" : "rerun request",
+    "value" : null
+  },
+  "customField2" : {
+    "label" : "docu link",
+    "value" : null
+  },
+  "efDayConstraint" : "None",
+  "efDuration" : "00:00:00:00",
+  "efEnabled" : false,
+  "efNthAmount" : 5,
+  "efOffsetDuration" : null,
+  "efOffsetDurationUnit" : "Minutes",
+  "efOffsetPercentage" : 0,
+  "efOffsetType" : "Percentage",
+  "efTime" : "00:00",
+  "efType" : "Time",
+  "exclusiveTasks" : [ ],
+  "executionRestriction" : "None",
+  "holdResources" : false,
+  "layoutOption" : "-- None --",
+  "lfDayConstraint" : "None",
+  "lfDuration" : "00:00:00:00",
+  "lfEnabled" : false,
+  "lfNthAmount" : 5,
+  "lfOffsetDuration" : null,
+  "lfOffsetDurationUnit" : "Minutes",
+  "lfOffsetPercentage" : 0,
+  "lfOffsetType" : "Percentage",
+  "lfTime" : "00:00",
+  "lfType" : "Time",
+  "lsDayConstraint" : "None",
+  "lsDuration" : "00:00:00:00",
+  "lsEnabled" : false,
+  "lsNthAmount" : 5,
+  "lsTime" : "00:00",
+  "lsType" : "Time",
+  "name" : "DEVOPS-WORKFLOW",
+  "notes" : [ ],
+  "numberOfTasks" : 8,
+  "opswiseGroups" : [ ],
+  "overrideCalendar" : false,
+  "resPriority" : 10,
+  "resolveNameImmediately" : false,
+  "restrictionPeriod" : "None",
+  "restrictionPeriodAfterDate" : null,
+  "restrictionPeriodAfterTime" : null,
+  "restrictionPeriodBeforeDate" : null,
+  "restrictionPeriodBeforeTime" : null,
+  "restrictionPeriodDateList" : [ ],
+  "retainSysIds" : true,
+  "runCriteria" : [ ],
+  "skippedOption" : "Show Skipped",
+  "startHeld" : false,
+  "startHeldReason" : null,
+  "stepActions" : [ ],
+  "stepConditions" : [ ],
+  "summary" : "Simulation of Devops process",
+  "sysId" : "cc0b0ec8324e4f48b46333e0c7c6b98c",
+  "timeZonePref" : "-- System Default --",
+  "twDelayAmount" : null,
+  "twDelayDuration" : "00:00:00:00",
+  "twDelayType" : "None",
+  "twWaitAmount" : null,
+  "twWaitDayConstraint" : "None",
+  "twWaitDuration" : "00:00:00:00",
+  "twWaitTime" : "00:00",
+  "twWaitType" : "None",
+  "twWorkflowOnly" : "-- System Default --",
+  "userEstimatedDuration" : null,
+  "variables" : [ {
+    "description" : null,
+    "name" : "release",
+    "sysId" : "fdd7e81dceb546d1b6e6616f0d69567a",
+    "value" : "R107"
+  } ],
+  "version" : 28,
+  "virtualResources" : [ ],
+  "workflowEdges" : [ {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "918",
+      "y" : "-14"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "Deploy-to-Prod-${release}",
+      "taskName" : "Demo-Ansible-Task",
+      "value" : "7"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "NOTIFY-STAKEHOLDERS",
+      "taskName" : "NOTIFY-END-CLAIM-PROCESS",
+      "value" : "27"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "-390",
+      "y" : "320"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "Jenkins-Start-Build-${release}",
+      "taskName" : "Jenkins-Start-Build",
+      "value" : "2"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "APPROVAL-START-DEPLOYMENT-PROCESS-${release}",
+      "taskName" : "APPROVAL-SALES-ORDER-PROCESS",
+      "value" : "39"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "-210",
+      "y" : "180"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "APPROVAL-START-DEPLOYMENT-PROCESS-${release}",
+      "taskName" : "APPROVAL-SALES-ORDER-PROCESS",
+      "value" : "39"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "${Release}-Create Change Request",
+      "taskName" : "Auto-Create Change Request",
+      "value" : "41"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "-120",
+      "y" : "-10"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "${Release}-Create Change Request",
+      "taskName" : "Auto-Create Change Request",
+      "value" : "41"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "CHANGE-APPROVAL-REQUEST-${release}",
+      "taskName" : "APPROVAL-SALES-ORDER-PROCESS",
+      "value" : "21"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "10",
+      "y" : "-60"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "CHANGE-APPROVAL-REQUEST-${release}",
+      "taskName" : "APPROVAL-SALES-ORDER-PROCESS",
+      "value" : "21"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "trigger-deployment-${release}",
+      "taskName" : "START-SAP-PROCESS",
+      "value" : "23"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "470",
+      "y" : ""
+    } ],
+    "sourceId" : {
+      "taskAlias" : "trigger-deployment-${release}",
+      "taskName" : "START-SAP-PROCESS",
+      "value" : "23"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "DOWNLOAD-SOURCE-CODE-REPO-${release}",
+      "taskName" : "DOWNLOAD-SOURCE-CODE-${release}",
+      "value" : "50"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "points" : [ {
+      "x" : "640",
+      "y" : "50"
+    } ],
+    "sourceId" : {
+      "taskAlias" : "DOWNLOAD-SOURCE-CODE-REPO-${release}",
+      "taskName" : "DOWNLOAD-SOURCE-CODE-${release}",
+      "value" : "50"
+    },
+    "straightEdge" : false,
+    "targetId" : {
+      "taskAlias" : "Deploy-to-Prod-${release}",
+      "taskName" : "Demo-Ansible-Task",
+      "value" : "7"
+    }
+  } ],
+  "workflowVertices" : [ {
+    "alias" : "Jenkins-Start-Build-${release}",
+    "task" : {
+      "value" : "Jenkins-Start-Build"
+    },
+    "vertexId" : "2",
+    "vertexX" : "-401",
+    "vertexY" : "479"
+  }, {
+    "alias" : "Deploy-to-Prod-${release}",
+    "task" : {
+      "value" : "Demo-Ansible-Task"
+    },
+    "vertexId" : "7",
+    "vertexX" : "769.5",
+    "vertexY" : "8"
+  }, {
+    "alias" : "CHANGE-APPROVAL-REQUEST-${release}",
+    "task" : {
+      "value" : "APPROVAL-SALES-ORDER-PROCESS"
+    },
+    "vertexId" : "21",
+    "vertexX" : "-1.5",
+    "vertexY" : "-30"
+  }, {
+    "alias" : "trigger-deployment-${release}",
+    "task" : {
+      "value" : "START-SAP-PROCESS"
+    },
+    "vertexId" : "23",
+    "vertexX" : "201",
+    "vertexY" : "-82"
+  }, {
+    "alias" : "NOTIFY-STAKEHOLDERS",
+    "task" : {
+      "value" : "NOTIFY-END-CLAIM-PROCESS"
+    },
+    "vertexId" : "27",
+    "vertexX" : "961",
+    "vertexY" : "148"
+  }, {
+    "alias" : "APPROVAL-START-DEPLOYMENT-PROCESS-${release}",
+    "task" : {
+      "value" : "APPROVAL-SALES-ORDER-PROCESS"
+    },
+    "vertexId" : "39",
+    "vertexX" : "-242.5",
+    "vertexY" : "291"
+  }, {
+    "alias" : "${Release}-Create Change Request",
+    "task" : {
+      "value" : "Auto-Create Change Request"
+    },
+    "vertexId" : "41",
+    "vertexX" : "-130",
+    "vertexY" : "107"
+  }, {
+    "alias" : "DOWNLOAD-SOURCE-CODE-REPO-${release}",
+    "task" : {
+      "value" : "DOWNLOAD-SOURCE-CODE-${release}"
+    },
+    "vertexId" : "50",
+    "vertexX" : "436",
+    "vertexY" : "10"
+  } ]
+}
