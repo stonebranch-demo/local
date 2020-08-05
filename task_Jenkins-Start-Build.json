@@ -1,0 +1,205 @@
+{
+  "type" : "taskUniversal",
+  "actions" : {
+    "abortActions" : [ ],
+    "emailNotifications" : [ ],
+    "setVariableActions" : [ ],
+    "snmpNotifications" : [ ],
+    "systemOperations" : [ ]
+  },
+  "agent" : "Ansible",
+  "agentCluster" : null,
+  "agentClusterVar" : null,
+  "agentVar" : null,
+  "broadcastCluster" : null,
+  "broadcastClusterVar" : null,
+  "choiceField1" : {
+    "label" : "Jenkins-Function",
+    "name" : "jenkins_function",
+    "value" : "start_build"
+  },
+  "cpDuration" : null,
+  "cpDurationUnit" : "Minutes",
+  "createConsole" : false,
+  "credentialField1" : {
+    "label" : "Authentication Token -Jenkin Job",
+    "name" : "job_token",
+    "value" : null
+  },
+  "credentialField2" : {
+    "label" : "Jenkins Credentials",
+    "name" : "jenkins_credentials",
+    "value" : "jenkins_cred"
+  },
+  "credentials" : "Ansible-Host",
+  "credentialsVar" : null,
+  "customField1" : {
+    "label" : "rerun request",
+    "value" : null
+  },
+  "customField2" : {
+    "label" : "docu link",
+    "value" : null
+  },
+  "desktopInteract" : false,
+  "efDayConstraint" : "None",
+  "efDuration" : "00:00:00:00",
+  "efEnabled" : false,
+  "efNthAmount" : 5,
+  "efOffsetDuration" : null,
+  "efOffsetDurationUnit" : "Minutes",
+  "efOffsetPercentage" : 0,
+  "efOffsetType" : "Percentage",
+  "efTime" : "00:00",
+  "efType" : "Time",
+  "elevateUser" : false,
+  "environment" : [ ],
+  "exclusiveTasks" : [ ],
+  "executionRestriction" : "None",
+  "exitCodeOutput" : null,
+  "exitCodeProcessing" : "Success Exitcode Range",
+  "exitCodeText" : null,
+  "exitCodes" : "0",
+  "holdResources" : false,
+  "intField1" : {
+    "label" : "Jenkins Connection Timeout(in secs)",
+    "name" : "timeout",
+    "value" : 10
+  },
+  "lfDayConstraint" : "None",
+  "lfDuration" : "00:00:00:00",
+  "lfEnabled" : false,
+  "lfNthAmount" : 5,
+  "lfOffsetDuration" : null,
+  "lfOffsetDurationUnit" : "Minutes",
+  "lfOffsetPercentage" : 0,
+  "lfOffsetType" : "Percentage",
+  "lfTime" : "00:00",
+  "lfType" : "Time",
+  "lsDayConstraint" : "None",
+  "lsDuration" : "00:00:00:00",
+  "lsEnabled" : false,
+  "lsNthAmount" : 5,
+  "lsTime" : "00:00",
+  "lsType" : "Time",
+  "name" : "Jenkins-Start-Build",
+  "notes" : [ ],
+  "opswiseGroups" : [ ],
+  "outputFailureOnly" : false,
+  "outputReturnFile" : null,
+  "outputReturnNline" : "100",
+  "outputReturnSline" : "1",
+  "outputReturnText" : null,
+  "outputReturnType" : "NONE",
+  "outputType" : "STDOUT",
+  "resPriority" : 10,
+  "resolveNameImmediately" : false,
+  "restrictionPeriod" : "None",
+  "restrictionPeriodAfterDate" : null,
+  "restrictionPeriodAfterTime" : null,
+  "restrictionPeriodBeforeDate" : null,
+  "restrictionPeriodBeforeTime" : null,
+  "restrictionPeriodDateList" : [ ],
+  "retainSysIds" : true,
+  "retryExitCodes" : null,
+  "retryIndefinitely" : false,
+  "retryInterval" : 60,
+  "retryMaximum" : 0,
+  "retrySuppressFailure" : false,
+  "runtimeDir" : null,
+  "scriptField1" : {
+    "label" : "Config XML",
+    "name" : "config_file_text",
+    "value" : null
+  },
+  "startHeld" : false,
+  "startHeldReason" : null,
+  "summary" : null,
+  "sysId" : "a4080883f2b04413bdcebd1d533d8d48",
+  "template" : "Jenkins",
+  "textField1" : {
+    "label" : "Jenkins JobName",
+    "name" : "jenkins_jobname",
+    "value" : "NewBuildJob"
+  },
+  "textField10" : {
+    "label" : "Next Build Number(+ Last Build Number)",
+    "name" : "next_build_number",
+    "value" : null
+  },
+  "textField11" : {
+    "label" : "Enable Job",
+    "name" : "enable_job",
+    "value" : null
+  },
+  "textField12" : {
+    "label" : "Disable Job",
+    "name" : "disable_job",
+    "value" : null
+  },
+  "textField13" : {
+    "label" : "Jenkins Build Number",
+    "name" : "build_number",
+    "value" : null
+  },
+  "textField14" : {
+    "label" : "Jenkins Plugin Name",
+    "name" : "plugin_name",
+    "value" : null
+  },
+  "textField2" : {
+    "label" : "Jenkins Job Parameters",
+    "name" : "job_inp_parm",
+    "value" : null
+  },
+  "textField3" : {
+    "label" : "Jenkins URL",
+    "name" : "jenkins_url",
+    "value" : "http://172.31.9.188:8080"
+  },
+  "textField4" : {
+    "label" : "From JobName",
+    "name" : "from_job",
+    "value" : null
+  },
+  "textField5" : {
+    "label" : "To JobName",
+    "name" : "to_job",
+    "value" : null
+  },
+  "textField6" : {
+    "label" : "Rename Job",
+    "name" : "rename_job",
+    "value" : null
+  },
+  "textField7" : {
+    "label" : "Enable Node",
+    "name" : "enable_node",
+    "value" : null
+  },
+  "textField8" : {
+    "label" : "Disable Node",
+    "name" : "disable_node",
+    "value" : null
+  },
+  "textField9" : {
+    "label" : "Delete Job",
+    "name" : "delete_job",
+    "value" : null
+  },
+  "timeZonePref" : "-- System Default --",
+  "twDelayAmount" : null,
+  "twDelayDuration" : "00:00:00:00",
+  "twDelayType" : "None",
+  "twWaitAmount" : null,
+  "twWaitDayConstraint" : "None",
+  "twWaitDuration" : "00:00:00:00",
+  "twWaitTime" : "00:00",
+  "twWaitType" : "None",
+  "twWorkflowOnly" : "-- System Default --",
+  "userEstimatedDuration" : null,
+  "variables" : [ ],
+  "version" : 5,
+  "virtualResources" : [ ],
+  "waitForOutput" : false
+}

@@ -1,0 +1,210 @@
+{
+  "type" : "taskUniversal",
+  "actions" : {
+    "abortActions" : [ ],
+    "emailNotifications" : [ ],
+    "setVariableActions" : [ ],
+    "snmpNotifications" : [ ],
+    "systemOperations" : [ ]
+  },
+  "agent" : "Frankfurt - AGNT0001",
+  "agentCluster" : null,
+  "agentClusterVar" : null,
+  "agentVar" : null,
+  "booleanField1" : {
+    "label" : "Attach output from Sibling Task",
+    "name" : "attachsiblingoutput",
+    "value" : false
+  },
+  "booleanField2" : {
+    "label" : "Attach output from any task instance",
+    "name" : "attachanyoutput",
+    "value" : false
+  },
+  "broadcastCluster" : null,
+  "broadcastClusterVar" : null,
+  "choiceField1" : {
+    "label" : "Function",
+    "name" : "function",
+    "value" : "Create Change"
+  },
+  "choiceField2" : {
+    "label" : "Logging Level",
+    "name" : "logginglevel",
+    "value" : "Info"
+  },
+  "choiceField3" : {
+    "label" : "Category",
+    "name" : "category",
+    "value" : null
+  },
+  "choiceField4" : {
+    "label" : "Subcategory",
+    "name" : "subcategory",
+    "value" : "Email"
+  },
+  "choiceField5" : {
+    "label" : "Impact",
+    "name" : "impact",
+    "value" : "2 - Medium"
+  },
+  "choiceField6" : {
+    "label" : "Urgency",
+    "name" : "urgency",
+    "value" : "3 - Low"
+  },
+  "choiceField7" : {
+    "label" : "Request Format",
+    "name" : "requestformat",
+    "value" : "application/xml"
+  },
+  "choiceField8" : {
+    "label" : "Response format",
+    "name" : "responseformat",
+    "value" : "application/xml"
+  },
+  "cpDuration" : null,
+  "cpDurationUnit" : "Minutes",
+  "createConsole" : false,
+  "credentialField1" : {
+    "label" : "ServiceNow Credential",
+    "name" : "credential",
+    "value" : "serviceNow-dev92216"
+  },
+  "credentialField2" : {
+    "label" : "UC Credential",
+    "name" : "controllercredential",
+    "value" : null
+  },
+  "credentials" : null,
+  "credentialsVar" : null,
+  "customField1" : {
+    "label" : "rerun request",
+    "value" : null
+  },
+  "customField2" : {
+    "label" : "docu link",
+    "value" : null
+  },
+  "desktopInteract" : false,
+  "efDayConstraint" : "None",
+  "efDuration" : "00:00:00:00",
+  "efEnabled" : false,
+  "efNthAmount" : 5,
+  "efOffsetDuration" : null,
+  "efOffsetDurationUnit" : "Minutes",
+  "efOffsetPercentage" : 0,
+  "efOffsetType" : "Percentage",
+  "efTime" : "00:00",
+  "efType" : "Time",
+  "elevateUser" : false,
+  "environment" : [ ],
+  "exclusiveTasks" : [ ],
+  "executionRestriction" : "None",
+  "exitCodeOutput" : null,
+  "exitCodeProcessing" : "Success Exitcode Range",
+  "exitCodeText" : null,
+  "exitCodes" : "0",
+  "holdResources" : false,
+  "lfDayConstraint" : "None",
+  "lfDuration" : "00:00:00:00",
+  "lfEnabled" : false,
+  "lfNthAmount" : 5,
+  "lfOffsetDuration" : null,
+  "lfOffsetDurationUnit" : "Minutes",
+  "lfOffsetPercentage" : 0,
+  "lfOffsetType" : "Percentage",
+  "lfTime" : "00:00",
+  "lfType" : "Time",
+  "lsDayConstraint" : "None",
+  "lsDuration" : "00:00:00:00",
+  "lsEnabled" : false,
+  "lsNthAmount" : 5,
+  "lsTime" : "00:00",
+  "lsType" : "Time",
+  "name" : "Auto-Create Change Request",
+  "notes" : [ ],
+  "opswiseGroups" : [ ],
+  "outputFailureOnly" : false,
+  "outputReturnFile" : null,
+  "outputReturnNline" : "100",
+  "outputReturnSline" : "1",
+  "outputReturnText" : null,
+  "outputReturnType" : "OUTERR",
+  "outputType" : "STDOUT",
+  "resPriority" : 10,
+  "resolveNameImmediately" : false,
+  "restrictionPeriod" : "None",
+  "restrictionPeriodAfterDate" : null,
+  "restrictionPeriodAfterTime" : null,
+  "restrictionPeriodBeforeDate" : null,
+  "restrictionPeriodBeforeTime" : null,
+  "restrictionPeriodDateList" : [ ],
+  "retainSysIds" : true,
+  "retryExitCodes" : null,
+  "retryIndefinitely" : false,
+  "retryInterval" : 60,
+  "retryMaximum" : 0,
+  "retrySuppressFailure" : false,
+  "runtimeDir" : null,
+  "startHeld" : false,
+  "startHeldReason" : null,
+  "summary" : null,
+  "sysId" : "f4a394ac316444d18a22736f0b657c29",
+  "template" : "ServiceNow",
+  "textField1" : {
+    "label" : "Caller",
+    "name" : "caller",
+    "value" : null
+  },
+  "textField2" : {
+    "label" : "Assigned to",
+    "name" : "assignedto",
+    "value" : null
+  },
+  "textField3" : {
+    "label" : "Short description",
+    "name" : "shortdescription",
+    "value" : "Release R104 tested and ready to deploy"
+  },
+  "textField4" : {
+    "label" : "Description",
+    "name" : "description",
+    "value" : "Release R104 tested and ready to deploy  - UAT Approved and Elements are freezed and placed in lockdown Environment"
+  },
+  "textField5" : {
+    "label" : "Instance URL",
+    "name" : "instanceurl",
+    "value" : "https://dev92216.service-now.com/"
+  },
+  "textField6" : {
+    "label" : "Sibling Task Name",
+    "name" : "siblingname",
+    "value" : null
+  },
+  "textField7" : {
+    "label" : "Task Instance ID",
+    "name" : "outputinstanceid",
+    "value" : null
+  },
+  "textField8" : {
+    "label" : "UC URL",
+    "name" : "controllerurl",
+    "value" : null
+  },
+  "timeZonePref" : "-- System Default --",
+  "twDelayAmount" : null,
+  "twDelayDuration" : "00:00:00:00",
+  "twDelayType" : "None",
+  "twWaitAmount" : null,
+  "twWaitDayConstraint" : "None",
+  "twWaitDuration" : "00:00:00:00",
+  "twWaitTime" : "00:00",
+  "twWaitType" : "None",
+  "twWorkflowOnly" : "-- System Default --",
+  "userEstimatedDuration" : null,
+  "variables" : [ ],
+  "version" : 3,
+  "virtualResources" : [ ],
+  "waitForOutput" : false
+}
