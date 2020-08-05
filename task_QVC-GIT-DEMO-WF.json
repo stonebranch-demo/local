@@ -1,0 +1,161 @@
+{
+  "type" : "taskWorkflow",
+  "actions" : {
+    "abortActions" : [ ],
+    "emailNotifications" : [ ],
+    "setVariableActions" : [ ],
+    "snmpNotifications" : [ ],
+    "systemOperations" : [ ]
+  },
+  "calculateCp" : false,
+  "calendar" : null,
+  "cpDuration" : null,
+  "cpDurationUnit" : "Minutes",
+  "customField1" : {
+    "label" : "rerun request",
+    "value" : null
+  },
+  "customField2" : {
+    "label" : "docu link",
+    "value" : null
+  },
+  "efDayConstraint" : "None",
+  "efDuration" : "00:00:00:00",
+  "efEnabled" : false,
+  "efNthAmount" : 5,
+  "efOffsetDuration" : null,
+  "efOffsetDurationUnit" : "Minutes",
+  "efOffsetPercentage" : 0,
+  "efOffsetType" : "Percentage",
+  "efTime" : "00:00",
+  "efType" : "Time",
+  "exclusiveTasks" : [ ],
+  "executionRestriction" : "None",
+  "holdResources" : false,
+  "layoutOption" : "-- None --",
+  "lfDayConstraint" : "None",
+  "lfDuration" : "00:00:00:00",
+  "lfEnabled" : false,
+  "lfNthAmount" : 5,
+  "lfOffsetDuration" : null,
+  "lfOffsetDurationUnit" : "Minutes",
+  "lfOffsetPercentage" : 0,
+  "lfOffsetType" : "Percentage",
+  "lfTime" : "00:00",
+  "lfType" : "Time",
+  "lsDayConstraint" : "None",
+  "lsDuration" : "00:00:00:00",
+  "lsEnabled" : false,
+  "lsNthAmount" : 5,
+  "lsTime" : "00:00",
+  "lsType" : "Time",
+  "name" : "QVC-GIT-DEMO-WF",
+  "notes" : [ ],
+  "numberOfTasks" : 4,
+  "opswiseGroups" : [ "DevOps-Demo-01" ],
+  "overrideCalendar" : false,
+  "resPriority" : 10,
+  "resolveNameImmediately" : false,
+  "restrictionPeriod" : "None",
+  "restrictionPeriodAfterDate" : null,
+  "restrictionPeriodAfterTime" : null,
+  "restrictionPeriodBeforeDate" : null,
+  "restrictionPeriodBeforeTime" : null,
+  "restrictionPeriodDateList" : [ ],
+  "retainSysIds" : true,
+  "runCriteria" : [ ],
+  "skippedOption" : "Show Skipped",
+  "startHeld" : false,
+  "startHeldReason" : null,
+  "stepActions" : [ ],
+  "stepConditions" : [ ],
+  "summary" : null,
+  "sysId" : "34ba6f551256459593b0c190e63b9722",
+  "timeZonePref" : "-- System Default --",
+  "twDelayAmount" : null,
+  "twDelayDuration" : "00:00:00:00",
+  "twDelayType" : "None",
+  "twWaitAmount" : null,
+  "twWaitDayConstraint" : "None",
+  "twWaitDuration" : "00:00:00:00",
+  "twWaitTime" : "00:00",
+  "twWaitType" : "None",
+  "twWorkflowOnly" : "-- System Default --",
+  "userEstimatedDuration" : null,
+  "variables" : [ ],
+  "version" : 5,
+  "virtualResources" : [ ],
+  "workflowEdges" : [ {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "QVC-Git-Demo-01",
+      "value" : "2"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "QVC-Git-Demo-02",
+      "value" : "3"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "QVC-Git-Demo-02",
+      "value" : "3"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "QVC-Git-Demo-03",
+      "value" : "4"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "QVC-Git-Demo-03",
+      "value" : "4"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "QVC-Git-Demo-04",
+      "value" : "5"
+    }
+  } ],
+  "workflowVertices" : [ {
+    "alias" : null,
+    "task" : {
+      "value" : "QVC-Git-Demo-01"
+    },
+    "vertexId" : "2",
+    "vertexX" : "51",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "QVC-Git-Demo-02"
+    },
+    "vertexId" : "3",
+    "vertexX" : "206",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "QVC-Git-Demo-03"
+    },
+    "vertexId" : "4",
+    "vertexX" : "361",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "QVC-Git-Demo-04"
+    },
+    "vertexId" : "5",
+    "vertexX" : "516",
+    "vertexY" : "25"
+  } ]
+}
