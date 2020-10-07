@@ -1,0 +1,182 @@
+{
+  "type" : "taskWorkflow",
+  "actions" : {
+    "abortActions" : [ ],
+    "emailNotifications" : [ ],
+    "setVariableActions" : [ ],
+    "snmpNotifications" : [ ],
+    "systemOperations" : [ ]
+  },
+  "calculateCp" : false,
+  "calendar" : null,
+  "cpDuration" : null,
+  "cpDurationUnit" : "Minutes",
+  "customField1" : {
+    "label" : null,
+    "value" : null
+  },
+  "customField2" : {
+    "label" : null,
+    "value" : null
+  },
+  "efDayConstraint" : "None",
+  "efDuration" : "00:00:00:00",
+  "efEnabled" : false,
+  "efNthAmount" : 5,
+  "efOffsetDuration" : null,
+  "efOffsetDurationUnit" : "Minutes",
+  "efOffsetPercentage" : 0,
+  "efOffsetType" : "Percentage",
+  "efTime" : "00:00",
+  "efType" : "Time",
+  "exclusiveTasks" : [ ],
+  "executionRestriction" : "None",
+  "holdResources" : false,
+  "layoutOption" : "-- None --",
+  "lfDayConstraint" : "None",
+  "lfDuration" : "00:00:00:00",
+  "lfEnabled" : false,
+  "lfNthAmount" : 5,
+  "lfOffsetDuration" : null,
+  "lfOffsetDurationUnit" : "Minutes",
+  "lfOffsetPercentage" : 0,
+  "lfOffsetType" : "Percentage",
+  "lfTime" : "00:00",
+  "lfType" : "Time",
+  "lsDayConstraint" : "None",
+  "lsDuration" : "00:00:00:00",
+  "lsEnabled" : false,
+  "lsNthAmount" : 5,
+  "lsTime" : "00:00",
+  "lsType" : "Time",
+  "name" : "EMA-WF-01",
+  "notes" : [ ],
+  "numberOfTasks" : 5,
+  "opswiseGroups" : [ "EMA-Demo" ],
+  "overrideCalendar" : false,
+  "resPriority" : 10,
+  "resolveNameImmediately" : false,
+  "restrictionPeriod" : "None",
+  "restrictionPeriodAfterDate" : null,
+  "restrictionPeriodAfterTime" : null,
+  "restrictionPeriodBeforeDate" : null,
+  "restrictionPeriodBeforeTime" : null,
+  "restrictionPeriodDateList" : [ ],
+  "retainSysIds" : true,
+  "runCriteria" : [ ],
+  "skippedOption" : "Show Skipped",
+  "startHeld" : false,
+  "startHeldReason" : null,
+  "stepActions" : [ ],
+  "stepConditions" : [ ],
+  "summary" : null,
+  "sysId" : "f089c8b1480d4fc1b62885f6d00fc163",
+  "timeZonePref" : "-- System Default --",
+  "twDelayAmount" : null,
+  "twDelayDuration" : "00:00:00:00",
+  "twDelayType" : "None",
+  "twWaitAmount" : null,
+  "twWaitDayConstraint" : "None",
+  "twWaitDuration" : "00:00:00:00",
+  "twWaitTime" : "00:00",
+  "twWaitType" : "None",
+  "twWorkflowOnly" : "-- System Default --",
+  "userEstimatedDuration" : null,
+  "variables" : [ ],
+  "version" : 4,
+  "virtualResources" : [ ],
+  "workflowEdges" : [ {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "EMA-Windows-01",
+      "value" : "2"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "EMA-Windows-02",
+      "value" : "3"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "EMA-Windows-02",
+      "value" : "3"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "EMA-Windows-02",
+      "value" : "4"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "EMA-Windows-02",
+      "value" : "4"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "EMA-Windows-03",
+      "value" : "5"
+    }
+  }, {
+    "condition" : {
+      "value" : "Success"
+    },
+    "sourceId" : {
+      "taskName" : "EMA-Windows-03",
+      "value" : "5"
+    },
+    "straightEdge" : true,
+    "targetId" : {
+      "taskName" : "EMA-Windows-05",
+      "value" : "6"
+    }
+  } ],
+  "workflowVertices" : [ {
+    "alias" : null,
+    "task" : {
+      "value" : "EMA-Windows-01"
+    },
+    "vertexId" : "2",
+    "vertexX" : "51",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "EMA-Windows-02"
+    },
+    "vertexId" : "3",
+    "vertexX" : "206",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "EMA-Windows-02"
+    },
+    "vertexId" : "4",
+    "vertexX" : "361",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "EMA-Windows-03"
+    },
+    "vertexId" : "5",
+    "vertexX" : "516",
+    "vertexY" : "25"
+  }, {
+    "alias" : null,
+    "task" : {
+      "value" : "EMA-Windows-05"
+    },
+    "vertexId" : "6",
+    "vertexX" : "671",
+    "vertexY" : "25"
+  } ]
+}
